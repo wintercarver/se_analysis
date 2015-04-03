@@ -13,12 +13,20 @@ As an example, the archive "academia.stackexchange.com.7z" was downloaded. The
 scripts should be run in this order (after unzipping):
 ```
 $python stack.py academia.stackexchange.com
-$python make\_plots.py academia.stackexchange.com
+$python make_plots.py academia.stackexchange.com
 ```
 
 Final plots will be saved in ./academia.stackexchange.org/plots. By default
 the top 5 used tags will have associated time frequency plots and usage per day
 of week plots generated. 
+
+The plots take the following name format:
+```
+freq_<rank>_<tag>_tight.png
+days_<rank>_<tag>_tight.png
+```
+The rank is an integer denoting the rank of the associated tag. The keyword 'tight'
+is a superficial plotting tag, indicating margin whitespace is reduced. 
 
 ## Brief code description
 
