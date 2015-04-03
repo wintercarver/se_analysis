@@ -1,5 +1,5 @@
 # se_analysis
-superficial analysis of stack exchange archives.
+## superficial analysis of stack exchange archives.
 
 The User must download the Stack Exchange archives for these scripts to work.
 
@@ -11,12 +11,26 @@ https://archive.org/download/stackexchange
 
 As an example, the archive "academia.stackexchange.com.7z" was downloaded. The 
 scripts should be run in this order (after unzipping):
-
+```
 $python stack.py academia.stackexchange.com
 $python make\_plots.py academia.stackexchange.com
+```
 
 Final plots will be saved in ./academia.stackexchange.org/plots. By default
 the top 5 used tags will have associated time frequency plots and usage per day
 of week plots generated. 
+
+## Brief code description
+
+A small wrapper class was made to facilitate the xml parsing `SEPost()` (stack
+exchange post), which strips down the abundance of post information to the necessary
+content for these basica plots. 
+
+A second class (`PostArchive()`) to manage the individual posts takes care of the sorting, ranking
+and calculation of derived quantities like average scores with minimum view 
+requirements.
+
+The basic plotting macros are managed by a class `PlotManager()` and is mostly 
+used to organize the kind of ugly matplotlib calls. 
 
 
