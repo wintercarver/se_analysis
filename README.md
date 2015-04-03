@@ -26,8 +26,10 @@ freq_<rank>_<tag>_tight.png
 days_<rank>_<tag>_tight.png
 ```
 The rank is an integer denoting the rank of the associated tag. The keyword 'tight'
-is a superficial plotting tag, indicating margin whitespace is reduced. 
+is a superficial plotting tag, indicating margin whitespace is reduced. Example
+plots are shown below.
 ![example frequency plot](./example_plots/freq_1_publications_tight.png)
+![example day usage plot](./example_plots/days_1_publications_tight.png)
 
 ## Brief code description
 
